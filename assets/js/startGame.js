@@ -1,3 +1,4 @@
+import { confetti } from "./confetti.js";
 import { createGameCard } from "./gameCard.js";
 import { createIconsArray, duplicatedArray, shuffle } from "./utils.js";
 export const startGame = (difficult)=> {
@@ -59,6 +60,10 @@ export const startGame = (difficult)=> {
                             clickable = true;
                         }, 500)
                      }
+            }
+
+            if (Array.from(cards).every(card => card.className.includes('flip'))) {
+                document.querySelector('.confetti').innerHTML = confetti
             }
         }
     }))
