@@ -3,7 +3,7 @@ export const createGameMenu = ()=>{
     const gameSection = document.querySelector('.game-section__container');
 
     gameSection.innerHTML = ''
-    title.textContent = 'Выбор сложноси';
+    title.textContent = 'choose your destiny';
     title.classList.add('game-menu__title')
     document.querySelector('.confetti').innerHTML = ''
 
@@ -11,7 +11,7 @@ export const createGameMenu = ()=>{
         const button = document.createElement('button');
 
         button.classList.add('game-menu__difficult-btn');
-        button.textContent = `${difficult} карт`;
+        button.textContent = `${difficult} cards`;
 
         button.addEventListener('click', () => {})
 

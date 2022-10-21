@@ -1,0 +1,80 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: rgb(38, 21, 21);
+}
+
+.game-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+.container {
+    max-width: 1250px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.header {
+    padding: 15px 0;
+}
+
+.header__title {
+    text-align: center;
+    margin: 0;
+    color: rgb(11, 138, 249);
+}
+
+.game-section {
+    padding-top: 50px;
+}
+
+.game-section__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* hit */
+
+.game-menu__title {
+    margin: 0;
+    margin-bottom: 15px;
+    text-align: center;
+    color: rgb(228, 158, 17);
+}
+
+.game-menu__difficult-btn:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.game-menu__difficult-btn {
+    padding: 5px 30px;
+    background-color: #183a4d;
+    border-radius: 10px;
+}
+
+.game-menu__difficult-btn:hover {
+    transition: background-color .3s ease-in-out, color .3s ease-in-out;
+    background-color: rgb(11, 11, 8);
+    color: #fff;
+    cursor: pointer;
+}
+
+.game-menu__difficult-btn:active {
+    background-color: rgb(228, 158, 17);
+    color: rgb(255, 255, 255);
+    cursor: crosshair;
+    border: 2px solid #fff;
+}
