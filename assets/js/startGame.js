@@ -1,5 +1,6 @@
 import { confetti } from "./confetti.js";
 import { createGameCard } from "./gameCard.js";
+import { createGameMenu } from "./gameMenu.js";
 import { createIconsArray, duplicatedArray, shuffle } from "./utils.js";
 export const startGame = (difficult)=> {
     let firstCard = null;
@@ -13,17 +14,19 @@ export const startGame = (difficult)=> {
     
     const restartBtn = document.createElement('button');
     gameSection.innerHTML = '';
-    restartBtn.textContent = 'restart';
+    restartBtn.textContent = 'exit';
     restartBtn.classList.add('restart-btn');
     gameTable.classList.add('game-table');
     shuffle(duplicatedCardsIcons);
-    console.log(duplicatedCardsIcons);
+
 
     duplicatedCardsIcons.forEach(icon => gameTable.append(createGameCard('question-circle', icon)))
 
     gameSection.append(gameTable,restartBtn);
 
     const cards = document.querySelectorAll('.game-card');
+
+    restartBtn.addEventListener('click', createGameMenu)
 
     cards.forEach((card, index) => card.addEventListener('click', () => {
         if (clickable == true && !card.classList.contains('successfully')){
@@ -64,6 +67,8 @@ export const startGame = (difficult)=> {
 
             if (Array.from(cards).every(card => card.className.includes('flip'))) {
                 document.querySelector('.confetti').innerHTML = confetti
+
+                document.querySelector('.game-table').innerHTML = ''
             }
         }
     }))

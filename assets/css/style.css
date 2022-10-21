@@ -61,20 +61,23 @@ body{
     margin-bottom: 10px;
 }
 
-.game-menu__difficult-btn {
+.game-menu__difficult-btn,
+.restart-btn {
     padding: 5px 30px;
     background-color: #183a4d;
     border-radius: 10px;
 }
 
-.game-menu__difficult-btn:hover {
+.game-menu__difficult-btn:hover,
+.restart-btn:hover {
     transition: background-color .3s ease-in-out, color .3s ease-in-out;
     background-color: rgb(11, 11, 8);
     color: #fff;
     cursor: pointer;
 }
 
-.game-menu__difficult-btn:active {
+.game-menu__difficult-btn:active,
+.restart-btn:active {
     background-color: rgb(228, 158, 17);
     color: rgb(255, 255, 255);
     cursor: crosshair;
@@ -97,7 +100,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: purple;
+    background: rgb(90 40 40 / 65%);
     border-radius: 5px;
     transition: all 0.2s linear;
     margin: 1%;
@@ -114,7 +117,7 @@ body{
 
 
 .game-card.flip {
-    background: #5dc6ff !important;
+    background: #868a8d !important;
     transform: perspective(100px) rotateY(180deg); 
 }
 
@@ -131,5 +134,5 @@ body{
 }
 
 .game-card:hover {
-    background: #fff;
+    background: rgb(230, 125, 91);
 }
