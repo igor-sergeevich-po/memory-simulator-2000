@@ -1,5 +1,6 @@
 import { createGameMenu } from "./gameMenu.js"
-const cardsApp = ()=> {
+const cardsApp = () => {
     createGameMenu()
 }
 cardsApp()
+
