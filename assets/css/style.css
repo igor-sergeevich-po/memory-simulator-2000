@@ -136,3 +136,8 @@ body{
 .game-card:hover {
     background: rgb(230, 125, 91);
 }
+
+.current-score {
+    color: #d8c45e;
+    font-size: 18px;
+}

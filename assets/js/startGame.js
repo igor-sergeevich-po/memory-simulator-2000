@@ -7,6 +7,13 @@ export const startGame = (difficult)=> {
     let secondCard = null;
     let clickable = true;
 
+
+
+    const currentScore = document.createElement('h3')
+    currentScore.classList.add('current-score')
+    currentScore.innerText = 'Your score: 0'
+
+
     const gameSection = document.querySelector('.game-section__container');
     const gameTable = document.createElement('div');
     const cardsIcons = createIconsArray(difficult);
@@ -22,7 +29,7 @@ export const startGame = (difficult)=> {
 
     duplicatedCardsIcons.forEach(icon => gameTable.append(createGameCard('question-circle', icon)))
 
-    gameSection.append(gameTable,restartBtn);
+    gameSection.append(currentScore, gameTable,restartBtn);
 
     const cards = document.querySelectorAll('.game-card');
 
@@ -48,7 +55,7 @@ export const startGame = (difficult)=> {
                         setTimeout(() => {
                             cards[firstCard].classList.add('successfully')
                             cards[secondCard].classList.add('successfully')
-
+                                currentScore.innerText= `Your score: ${(+(currentScore.innerText).replace(/[^0-9]/g,""))+1}`
                             firstCard = null;
                             secondCard = null;
                             clickable = true;
@@ -57,7 +64,7 @@ export const startGame = (difficult)=> {
                         setTimeout(() => {
                             cards[firstCard].classList.remove('flip')
                             cards[secondCard].classList.remove('flip')
-
+                                currentScore.innerText= `Your score: ${(+(currentScore.innerText).replace(/[^0-9]/g,""))+1}`
                             firstCard = null;
                             secondCard = null;
                             clickable = true;
