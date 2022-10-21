@@ -15,14 +15,14 @@ export const duplicatedArray = (array) => array.reduce((res, current) => res.con
 
 export const createIconsArray = (initialCount) => {
     const cardsIcons = [
-        'compass',
-        'cloud',
-        'play',
-        'bolt',
-        'stop',
-        'cogs',
-        'atom',
-        'basketball-ball'
+        'motorcycle',
+        'microchip',
+        'bicycle',
+        'crown',
+        'cat',
+        'ghost',
+        'hippo',
+        'poo'
     ];
 
     switch (initialCount) {
