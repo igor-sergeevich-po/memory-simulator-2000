@@ -55,7 +55,7 @@ export const startGame = (difficult)=> {
                         setTimeout(() => {
                             cards[firstCard].classList.add('successfully')
                             cards[secondCard].classList.add('successfully')
-                                currentScore.innerText= `Your score: ${(+(currentScore.innerText).replace(/[^0-9]/g,""))+1}`
+                                currentScore.innerText= `Your score: ${(+(currentScore.innerText).replace(/[^0-9\-]/g,""))+5}`
                             firstCard = null;
                             secondCard = null;
                             clickable = true;
@@ -64,7 +64,7 @@ export const startGame = (difficult)=> {
                         setTimeout(() => {
                             cards[firstCard].classList.remove('flip')
                             cards[secondCard].classList.remove('flip')
-                                currentScore.innerText= `Your score: ${(+(currentScore.innerText).replace(/[^0-9]/g,""))+1}`
+                                currentScore.innerText= `Your score: ${(+(currentScore.innerText).replace(/[^0-9\-]/g,""))-1}`
                             firstCard = null;
                             secondCard = null;
                             clickable = true;
